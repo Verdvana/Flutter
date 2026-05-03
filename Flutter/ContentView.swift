@@ -417,12 +417,33 @@ struct StartRecordButton: View {
     }
 }
 
+@MainActor
 @Observable
 final class FetalMovementManager {
     private var modelContext: ModelContext
+    private let staleSessionThreshold: TimeInterval = 12 * 60 * 60
     var activeSession: FetalMovementSession?; var showValidityAlert: Bool = false; var clickTrigger: Bool = false; var rawClickCount: Int = 0; var refreshID: UUID = UUID()
-    init(modelContext: ModelContext) { self.modelContext = modelContext }
-    func startNewSession(at date: Date = .now) { let session = FetalMovementSession(startDate: date); modelContext.insert(session); activeSession = session; rawClickCount = 0; saveContext() }
+    init(modelContext: ModelContext) {
+        self.modelContext = modelContext
+        WatchConnectivitySyncCoordinator.shared.configure(modelContext: modelContext)
+        backfillMissingIdentifiers()
+        reloadFromStore()
+        NotificationCenter.default.addObserver(
+            forName: SyncNotification.didApplyRemoteChange,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            self?.reloadFromStore()
+        }
+    }
+    func startNewSession(at date: Date = .now) {
+        let session = FetalMovementSession(startDate: date)
+        modelContext.insert(session)
+        activeSession = session
+        rawClickCount = 0
+        saveContext()
+        WatchConnectivitySyncCoordinator.shared.sendSessionStarted(session)
+    }
     func logMovement() {
         let now = Date(); clickTrigger.toggle()
         if activeSession == nil { startNewSession(at: now) }
@@ -431,6 +452,8 @@ final class FetalMovementManager {
         var isValid = true; if let lastValidRecord = validatedRecords.last { if now.timeIntervalSince(lastValidRecord.timestamp) < 5 * 60 { isValid = false } }
         let record = FetalMovementRecord(timestamp: now, isValidated: isValid); session.records.append(record)
         if isValid { triggerHapticFeedback(.success) } else { rawClickCount += 1; triggerHapticFeedback(.directionDown) }
+        saveContext()
+        WatchConnectivitySyncCoordinator.shared.sendMovementLogged(session: session, record: record)
         WidgetCenter.shared.reloadAllTimelines()
     }
     func tryEndSession() { if let session = activeSession { if !session.isDurationValid { showValidityAlert = true } else { finalizeSession(discard: false) } } }
@@ -438,9 +461,60 @@ final class FetalMovementManager {
         guard let session = activeSession else { return }
         if !discard { session.endDate = Date() }
         activeSession = nil; showValidityAlert = false
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { self.saveContext(); self.rawClickCount = 0; self.refreshID = UUID() }
+        saveContext()
+        WatchConnectivitySyncCoordinator.shared.sendSessionFinalized(session, discard: discard)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { self.rawClickCount = 0; self.refreshID = UUID() }
     }
     private func saveContext() { try? modelContext.save(); WidgetCenter.shared.reloadAllTimelines() }
+    private func backfillMissingIdentifiers() {
+        let descriptor = FetchDescriptor<FetalMovementSession>()
+        guard let sessions = try? modelContext.fetch(descriptor) else { return }
+
+        var didChange = false
+        for session in sessions {
+            didChange = session.ensureIdentifiers() || didChange
+        }
+
+        if didChange {
+            saveContext()
+        }
+    }
+    private func reloadFromStore() {
+        let descriptor = FetchDescriptor<FetalMovementSession>(
+            predicate: #Predicate<FetalMovementSession> { session in
+                session.endDate == nil && !session.isDiscarded
+            },
+            sortBy: [SortDescriptor(\.startDate, order: .reverse)]
+        )
+        let openSessions = (try? modelContext.fetch(descriptor)) ?? []
+        activeSession = normalizeOpenSessions(openSessions)
+        rawClickCount = max(0, (activeSession?.rawCount ?? 0) - (activeSession?.count ?? 0))
+        refreshID = UUID()
+        WidgetCenter.shared.reloadAllTimelines()
+    }
+    private func normalizeOpenSessions(_ openSessions: [FetalMovementSession]) -> FetalMovementSession? {
+        guard !openSessions.isEmpty else { return nil }
+
+        var sessions = openSessions.sorted { $0.startDate > $1.startDate }
+        let newestSession = sessions.removeFirst()
+        var didChange = false
+
+        if newestSession.duration > staleSessionThreshold {
+            newestSession.isDiscarded = true
+            didChange = true
+        }
+
+        for staleSession in sessions {
+            staleSession.isDiscarded = true
+            didChange = true
+        }
+
+        if didChange {
+            saveContext()
+        }
+
+        return newestSession.isDiscarded ? nil : newestSession
+    }
     private func triggerHapticFeedback(_ type: HapticType = .success) {
         #if os(watchOS)
         WKInterfaceDevice.current().play((type == .success) ? .success : .directionDown)
