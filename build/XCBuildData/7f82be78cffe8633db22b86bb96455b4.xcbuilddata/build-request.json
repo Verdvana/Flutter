@@ -1,0 +1,48 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildAndRun"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "1e6a52bde17a4c6547423fb81448c2e54981fa84fbc1588fc9cabe5b10ea56eb"
+    },
+    {
+      "guid" : "1e6a52bde17a4c6547423fb81448c2e55c6ba1d3c6fde4749ce011144a75d985"
+    },
+    {
+      "guid" : "1e6a52bde17a4c6547423fb81448c2e58baeeb14c1d5d2420df7725e15259003"
+    },
+    {
+      "guid" : "1e6a52bde17a4c6547423fb81448c2e54981fa84fbc1588fc9cabe5b10ea56eb"
+    }
+  ],
+  "containerPath" : "/Users/verdvana/Project/iOS_App/Flutter/Flutter.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : false,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

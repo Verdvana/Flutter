@@ -1,0 +1,10 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+# 如果是 Xcode 项目
+build/
+DerivedData/
+*.xcuserdata
+# 如果是 Flutter/Node.js
+node_modules/
+.env

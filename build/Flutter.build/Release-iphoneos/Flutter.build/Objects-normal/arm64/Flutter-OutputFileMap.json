@@ -1,0 +1,31 @@
+{
+  "" : {
+    "const-values" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/Flutter-primary.swiftconstvalues",
+    "dependencies" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/Flutter-primary.d",
+    "diagnostics" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/Flutter-primary.dia",
+    "emit-module-dependencies" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/Flutter-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/Flutter-primary-emit-module.dia",
+    "pch" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/Flutter-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/Flutter-primary.swiftdeps"
+  },
+  "/Users/verdvana/Project/iOS_App/Flutter/DataModel.swift" : {
+    "index-unit-output-path" : "/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/DataModel.o",
+    "llvm-bc" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/DataModel.bc",
+    "object" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/DataModel.o"
+  },
+  "/Users/verdvana/Project/iOS_App/Flutter/Flutter/ContentView.swift" : {
+    "index-unit-output-path" : "/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/ContentView.o"
+  },
+  "/Users/verdvana/Project/iOS_App/Flutter/Flutter/FlutterApp.swift" : {
+    "index-unit-output-path" : "/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/FlutterApp.o",
+    "llvm-bc" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/FlutterApp.bc",
+    "object" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/FlutterApp.o"
+  },
+  "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  }
+}

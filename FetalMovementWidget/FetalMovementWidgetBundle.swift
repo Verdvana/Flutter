@@ -12,6 +12,6 @@ import SwiftUI
 struct FetalMovementWidgetBundle: WidgetBundle {
     var body: some Widget {
         FetalMovementWidget()
-        FetalMovementWidgetControl()
+        // FetalMovementWidgetControl() // 暂时注释掉，避免某些系统版本由于 ControlWidget 报错导致整个复杂表盘扩展失效
     }
 }

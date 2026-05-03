@@ -1,0 +1,12 @@
+{
+  "/Users/verdvana/Project/iOS_App/Flutter/DataModel.swift" : {
+    "abi-baseline-json" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FlutterWatch Watch App.build/Objects-normal/arm64_32/FlutterWatch_Watch_App.abi.json",
+    "const-values" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FlutterWatch Watch App.build/Objects-normal/arm64_32/FlutterWatch Watch App-primary.swiftconstvalues",
+    "dependencies" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FlutterWatch Watch App.build/Objects-normal/arm64_32/FlutterWatch Watch App-primary.d",
+    "diagnostics" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FlutterWatch Watch App.build/Objects-normal/arm64_32/FlutterWatch Watch App-primary.dia",
+    "objc-header" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FlutterWatch Watch App.build/Objects-normal/arm64_32/FlutterWatch_Watch_App-Swift.h",
+    "swiftdoc" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FlutterWatch Watch App.build/Objects-normal/arm64_32/FlutterWatch_Watch_App.swiftdoc",
+    "swiftmodule" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FlutterWatch Watch App.build/Objects-normal/arm64_32/FlutterWatch_Watch_App.swiftmodule",
+    "swiftsourceinfo" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FlutterWatch Watch App.build/Objects-normal/arm64_32/FlutterWatch_Watch_App.swiftsourceinfo"
+  }
+}

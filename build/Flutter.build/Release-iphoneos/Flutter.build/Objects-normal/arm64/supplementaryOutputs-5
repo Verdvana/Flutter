@@ -1,0 +1,12 @@
+{
+  "/Users/verdvana/Project/iOS_App/Flutter/Flutter/ContentView.swift" : {
+    "abi-baseline-json" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/Flutter.abi.json",
+    "const-values" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/Flutter-primary.swiftconstvalues",
+    "dependencies" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/Flutter-primary.d",
+    "diagnostics" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/Flutter-primary.dia",
+    "objc-header" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/Flutter-Swift.h",
+    "swiftdoc" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/Flutter.swiftdoc",
+    "swiftmodule" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/Flutter.swiftmodule",
+    "swiftsourceinfo" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-iphoneos/Flutter.build/Objects-normal/arm64/Flutter.swiftsourceinfo"
+  }
+}

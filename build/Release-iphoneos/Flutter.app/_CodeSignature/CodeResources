@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>files</key>
+	<dict>
+		<key>AppIcon60x60@2x.png</key>
+		<data>
+		gzEUu/kROnGOa2NbyStuWQVWRaE=
+		</data>
+		<key>AppIcon76x76@2x~ipad.png</key>
+		<data>
+		4gxPYyw/1yoY/Bc6D7vyIsp1wbI=
+		</data>
+		<key>Assets.car</key>
+		<data>
+		3RD5Ofx+/xIVJCAUcGOqbiy0U9M=
+		</data>
+		<key>Info.plist</key>
+		<data>
+		LB6BJGjQZz6UKHrS6N1isvongBs=
+		</data>
+		<key>PkgInfo</key>
+		<data>
+		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>Watch/FlutterWatch Watch App.app/Assets.car</key>
+		<data>
+		pkBwBPzNDJY2c7ieuf9dt+VUAAI=
+		</data>
+		<key>Watch/FlutterWatch Watch App.app/FlutterWatch Watch App</key>
+		<data>
+		pS9DFBZqK0cjbnw3IVg/5Mqh+JU=
+		</data>
+		<key>Watch/FlutterWatch Watch App.app/Info.plist</key>
+		<data>
+		M5GTLwaWZ6gkbMORn9HIm3bEAR8=
+		</data>
+		<key>Watch/FlutterWatch Watch App.app/PkgInfo</key>
+		<data>
+		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>Watch/FlutterWatch Watch App.app/PlugIns/FetalMovementWidgetExtension.appex/FetalMovementWidgetExtension</key>
+		<data>
+		AVUpCQbYvBW90QIKcwzgJ/0wpwE=
+		</data>
+		<key>Watch/FlutterWatch Watch App.app/PlugIns/FetalMovementWidgetExtension.appex/Info.plist</key>
+		<data>
+		iPC3pQ1+1/UyGNnGRc4UH6Hfcr0=
+		</data>
+		<key>Watch/FlutterWatch Watch App.app/PlugIns/FetalMovementWidgetExtension.appex/Metadata.appintents/extract.actionsdata</key>
+		<data>
+		9vVx8+VEe3kWq4giGGzxgGc2ox4=
+		</data>
+		<key>Watch/FlutterWatch Watch App.app/PlugIns/FetalMovementWidgetExtension.appex/Metadata.appintents/version.json</key>
+		<data>
+		jBaV/di7mvzg5oR4p7Cs2YgjqZo=
+		</data>
+		<key>Watch/FlutterWatch Watch App.app/PlugIns/FetalMovementWidgetExtension.appex/_CodeSignature/CodeResources</key>
+		<data>
+		HOKbRhVN5mu76s0eap19Pbx1afA=
+		</data>
+		<key>Watch/FlutterWatch Watch App.app/PlugIns/FetalMovementWidgetExtension.appex/embedded.mobileprovision</key>
+		<data>
+		O93+EN4H3esTYhPXn78yRzXOJmQ=
+		</data>
+		<key>Watch/FlutterWatch Watch App.app/_CodeSignature/CodeResources</key>
+		<data>
+		5xU0+l6MNKYVLVe48JgqRvmHb7c=
+		</data>
+		<key>Watch/FlutterWatch Watch App.app/embedded.mobileprovision</key>
+		<data>
+		au4xNL/6fX9Bxe2+qK99lqu+Onk=
+		</data>
+		<key>embedded.mobileprovision</key>
+		<data>
+		Ck75vRJFM4/9UrRyz6IPcutzSFc=
+		</data>
+	</dict>
+	<key>files2</key>
+	<dict>
+		<key>AppIcon60x60@2x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			X6mN9djHO29wHA0Gjrwz50/qVUrUw5ovgXfFmsOsQlE=
+			</data>
+		</dict>
+		<key>AppIcon76x76@2x~ipad.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CiGCoS4+6+Jo13I4YgGN817sJ/tLAnuHc+ah8PKEHUY=
+			</data>
+		</dict>
+		<key>Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			d4qlY4KHn3dESPyWco+VMe+fZRH2jT6tvjtIcXQsq3M=
+			</data>
+		</dict>
+		<key>Watch/FlutterWatch Watch App.app/Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			y1PvsoISuPiqA+xKa701T1F7q6G6P7S1RktjAUpgWOw=
+			</data>
+		</dict>
+		<key>Watch/FlutterWatch Watch App.app/FlutterWatch Watch App</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jKGsEhqphJuUdojZ0OPbDQYnIbi9mT9BtzAa+xzRe7M=
+			</data>
+		</dict>
+		<key>Watch/FlutterWatch Watch App.app/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OAjaqiOFttyXwLnku2mrIqZ31GlrJTEY6seystBOymI=
+			</data>
+		</dict>
+		<key>Watch/FlutterWatch Watch App.app/PkgInfo</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			glAhkclISwTWhTdPmHmgBmBpxJuKyuegSwHTjQfo7KA=
+			</data>
+		</dict>
+		<key>Watch/FlutterWatch Watch App.app/PlugIns/FetalMovementWidgetExtension.appex/FetalMovementWidgetExtension</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EHly3eHq8I8l46ZRrqCvQRFpDGBZ2GSSVKtTORjaP2U=
+			</data>
+		</dict>
+		<key>Watch/FlutterWatch Watch App.app/PlugIns/FetalMovementWidgetExtension.appex/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			c/kjUgG4w4uDd+IR8twLmCk6BWezQN1Vu5FWyMl0ieU=
+			</data>
+		</dict>
+		<key>Watch/FlutterWatch Watch App.app/PlugIns/FetalMovementWidgetExtension.appex/Metadata.appintents/extract.actionsdata</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			el7kXd7qpqNME+CHJTNYUNWhknTQ9LWmA5QxrlwG80w=
+			</data>
+		</dict>
+		<key>Watch/FlutterWatch Watch App.app/PlugIns/FetalMovementWidgetExtension.appex/Metadata.appintents/version.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5Cs5LOfU/7QFN2Dodu/9KDrcR26S1JmAL5f/aEWKNxM=
+			</data>
+		</dict>
+		<key>Watch/FlutterWatch Watch App.app/PlugIns/FetalMovementWidgetExtension.appex/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			g5xr+wS8XRs+Jv2X3lXr0SxlbzszKll3L3+w3p4zcQo=
+			</data>
+		</dict>
+		<key>Watch/FlutterWatch Watch App.app/PlugIns/FetalMovementWidgetExtension.appex/embedded.mobileprovision</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nWJySN8uZI/e0ol5k6IEsRGHL8uk3iLcnpofNNgpaJM=
+			</data>
+		</dict>
+		<key>Watch/FlutterWatch Watch App.app/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			M2sfmywBLhd6v0Y/el+Sb0cctwjAXIhdiiLHctNfPq4=
+			</data>
+		</dict>
+		<key>Watch/FlutterWatch Watch App.app/embedded.mobileprovision</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			s6Iw8h17MZ9IxyB2gFaxTpdbGTuZ/3EPiniifCjw0Ew=
+			</data>
+		</dict>
+		<key>embedded.mobileprovision</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ccjI0TE0OUuZkzxoI6mLwrGp7IHq5+eE+dNTarByRKI=
+			</data>
+		</dict>
+	</dict>
+	<key>rules</key>
+	<dict>
+		<key>^.*</key>
+		<true/>
+		<key>^.*\.lproj/</key>
+		<dict>
+			<key>optional</key>
+			<true/>
+			<key>weight</key>
+			<real>1000</real>
+		</dict>
+		<key>^.*\.lproj/locversion.plist$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
+		</dict>
+		<key>^version.plist$</key>
+		<true/>
+	</dict>
+	<key>rules2</key>
+	<dict>
+		<key>.*\.dSYM($|/)</key>
+		<dict>
+			<key>weight</key>
+			<real>11</real>
+		</dict>
+		<key>^(.*/)?\.DS_Store$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>2000</real>
+		</dict>
+		<key>^.*</key>
+		<true/>
+		<key>^.*\.lproj/</key>
+		<dict>
+			<key>optional</key>
+			<true/>
+			<key>weight</key>
+			<real>1000</real>
+		</dict>
+		<key>^.*\.lproj/locversion.plist$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
+		</dict>
+		<key>^Info\.plist$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^PkgInfo$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^embedded\.provisionprofile$</key>
+		<dict>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^version\.plist$</key>
+		<dict>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+	</dict>
+</dict>
+</plist>

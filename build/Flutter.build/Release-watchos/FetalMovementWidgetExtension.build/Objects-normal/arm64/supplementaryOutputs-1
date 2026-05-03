@@ -1,0 +1,12 @@
+{
+  "/Users/verdvana/Project/iOS_App/Flutter/FetalMovementWidget/FetalMovementWidget.swift" : {
+    "abi-baseline-json" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetExtension.abi.json",
+    "const-values" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetExtension-primary.swiftconstvalues",
+    "dependencies" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetExtension-primary.d",
+    "diagnostics" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetExtension-primary.dia",
+    "objc-header" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetExtension-Swift.h",
+    "swiftdoc" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetExtension.swiftdoc",
+    "swiftmodule" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetExtension.swiftmodule",
+    "swiftsourceinfo" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetExtension.swiftsourceinfo"
+  }
+}

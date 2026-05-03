@@ -1,0 +1,41 @@
+{
+  "" : {
+    "const-values" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetExtension-primary.swiftconstvalues",
+    "dependencies" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetExtension-primary.d",
+    "diagnostics" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetExtension-primary.dia",
+    "emit-module-dependencies" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetExtension-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetExtension-primary-emit-module.dia",
+    "pch" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetExtension-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetExtension-primary.swiftdeps"
+  },
+  "/Users/verdvana/Project/iOS_App/Flutter/DataModel.swift" : {
+    "index-unit-output-path" : "/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/DataModel.o",
+    "llvm-bc" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/DataModel.bc",
+    "object" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/DataModel.o"
+  },
+  "/Users/verdvana/Project/iOS_App/Flutter/FetalMovementWidget/FetalMovementWidget.swift" : {
+    "index-unit-output-path" : "/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidget.o",
+    "llvm-bc" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidget.bc",
+    "object" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidget.o"
+  },
+  "/Users/verdvana/Project/iOS_App/Flutter/FetalMovementWidget/FetalMovementWidgetBundle.swift" : {
+    "index-unit-output-path" : "/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetBundle.o",
+    "llvm-bc" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetBundle.bc",
+    "object" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetBundle.o"
+  },
+  "/Users/verdvana/Project/iOS_App/Flutter/FetalMovementWidget/FetalMovementWidgetControl.swift" : {
+    "index-unit-output-path" : "/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetControl.o",
+    "llvm-bc" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetControl.bc",
+    "object" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/FetalMovementWidgetControl.o"
+  },
+  "/Users/verdvana/Project/iOS_App/Flutter/FlutterWatch Watch App/ContentView.swift" : {
+    "index-unit-output-path" : "/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/ContentView.o"
+  },
+  "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/verdvana/Project/iOS_App/Flutter/build/Flutter.build/Release-watchos/FetalMovementWidgetExtension.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  }
+}

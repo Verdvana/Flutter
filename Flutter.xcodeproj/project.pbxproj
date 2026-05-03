@@ -6,8 +6,65 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		42832CAF2FA489D9000D5982 /* FlutterWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 42832CA52FA489D8000D5982 /* FlutterWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		42832CFC2FA4E925000D5982 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42832CFB2FA4E924000D5982 /* WidgetKit.framework */; };
+		42832CFE2FA4E925000D5982 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42832CFD2FA4E925000D5982 /* SwiftUI.framework */; };
+		42832D0B2FA4E926000D5982 /* FetalMovementWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 42832CF92FA4E924000D5982 /* FetalMovementWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		42832D1E2FA5A84C000D5982 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42832D1D2FA5A84C000D5982 /* DataModel.swift */; };
+		42832D1F2FA5A84C000D5982 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42832D1D2FA5A84C000D5982 /* DataModel.swift */; };
+		42832D202FA5A84C000D5982 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42832D1D2FA5A84C000D5982 /* DataModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		42832CAD2FA489D9000D5982 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42832C862FA4887A000D5982 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42832CA42FA489D8000D5982;
+			remoteInfo = "FlutterWatch Watch App";
+		};
+		42832D092FA4E926000D5982 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42832C862FA4887A000D5982 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42832CF82FA4E924000D5982;
+			remoteInfo = FetalMovementWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		42832CB32FA489D9000D5982 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				42832CAF2FA489D9000D5982 /* FlutterWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42832D102FA4E926000D5982 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				42832D0B2FA4E926000D5982 /* FetalMovementWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		42832C8E2FA4887A000D5982 /* Flutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42832CA52FA489D8000D5982 /* FlutterWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FlutterWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42832CF92FA4E924000D5982 /* FetalMovementWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FetalMovementWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		42832CFB2FA4E924000D5982 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		42832CFD2FA4E925000D5982 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		42832D1D2FA5A84C000D5982 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -17,6 +74,20 @@
 				Info.plist,
 			);
 			target = 42832C8D2FA4887A000D5982 /* Flutter */;
+		};
+		42832D0F2FA4E926000D5982 /* Exceptions for "FetalMovementWidget" folder in "FetalMovementWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 42832CF82FA4E924000D5982 /* FetalMovementWidgetExtension */;
+		};
+		42832D122FA4EAE0000D5982 /* Exceptions for "FlutterWatch Watch App" folder in "FetalMovementWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ContentView.swift,
+			);
+			target = 42832CF82FA4E924000D5982 /* FetalMovementWidgetExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -29,6 +100,22 @@
 			path = Flutter;
 			sourceTree = "<group>";
 		};
+		42832CA62FA489D8000D5982 /* FlutterWatch Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				42832D122FA4EAE0000D5982 /* Exceptions for "FlutterWatch Watch App" folder in "FetalMovementWidgetExtension" target */,
+			);
+			path = "FlutterWatch Watch App";
+			sourceTree = "<group>";
+		};
+		42832CFF2FA4E925000D5982 /* FetalMovementWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				42832D0F2FA4E926000D5982 /* Exceptions for "FetalMovementWidget" folder in "FetalMovementWidgetExtension" target */,
+			);
+			path = FetalMovementWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,13 +126,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		42832CA22FA489D8000D5982 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42832CF62FA4E924000D5982 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42832CFE2FA4E925000D5982 /* SwiftUI.framework in Frameworks */,
+				42832CFC2FA4E925000D5982 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		42832C852FA4887A000D5982 = {
 			isa = PBXGroup;
 			children = (
+				42832D1D2FA5A84C000D5982 /* DataModel.swift */,
 				42832C902FA4887A000D5982 /* Flutter */,
+				42832CA62FA489D8000D5982 /* FlutterWatch Watch App */,
+				42832CFF2FA4E925000D5982 /* FetalMovementWidget */,
+				42832CFA2FA4E924000D5982 /* Frameworks */,
 				42832C8F2FA4887A000D5982 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,8 +161,19 @@
 			isa = PBXGroup;
 			children = (
 				42832C8E2FA4887A000D5982 /* Flutter.app */,
+				42832CA52FA489D8000D5982 /* FlutterWatch Watch App.app */,
+				42832CF92FA4E924000D5982 /* FetalMovementWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		42832CFA2FA4E924000D5982 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42832CFB2FA4E924000D5982 /* WidgetKit.framework */,
+				42832CFD2FA4E925000D5982 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,10 +186,12 @@
 				42832C8A2FA4887A000D5982 /* Sources */,
 				42832C8B2FA4887A000D5982 /* Frameworks */,
 				42832C8C2FA4887A000D5982 /* Resources */,
+				42832CB32FA489D9000D5982 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				42832CAE2FA489D9000D5982 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				42832C902FA4887A000D5982 /* Flutter */,
@@ -82,6 +202,52 @@
 			productName = Flutter;
 			productReference = 42832C8E2FA4887A000D5982 /* Flutter.app */;
 			productType = "com.apple.product-type.application";
+		};
+		42832CA42FA489D8000D5982 /* FlutterWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42832CB02FA489D9000D5982 /* Build configuration list for PBXNativeTarget "FlutterWatch Watch App" */;
+			buildPhases = (
+				42832CA12FA489D8000D5982 /* Sources */,
+				42832CA22FA489D8000D5982 /* Frameworks */,
+				42832CA32FA489D8000D5982 /* Resources */,
+				42832D102FA4E926000D5982 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42832D0A2FA4E926000D5982 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				42832CA62FA489D8000D5982 /* FlutterWatch Watch App */,
+			);
+			name = "FlutterWatch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "FlutterWatch Watch App";
+			productReference = 42832CA52FA489D8000D5982 /* FlutterWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		42832CF82FA4E924000D5982 /* FetalMovementWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42832D0C2FA4E926000D5982 /* Build configuration list for PBXNativeTarget "FetalMovementWidgetExtension" */;
+			buildPhases = (
+				42832CF52FA4E924000D5982 /* Sources */,
+				42832CF62FA4E924000D5982 /* Frameworks */,
+				42832CF72FA4E924000D5982 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				42832CFF2FA4E925000D5982 /* FetalMovementWidget */,
+			);
+			name = FetalMovementWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = FetalMovementWidgetExtension;
+			productReference = 42832CF92FA4E924000D5982 /* FetalMovementWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -94,6 +260,12 @@
 				LastUpgradeCheck = 2640;
 				TargetAttributes = {
 					42832C8D2FA4887A000D5982 = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+					42832CA42FA489D8000D5982 = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+					42832CF82FA4E924000D5982 = {
 						CreatedOnToolsVersion = 26.4.1;
 					};
 				};
@@ -113,12 +285,28 @@
 			projectRoot = "";
 			targets = (
 				42832C8D2FA4887A000D5982 /* Flutter */,
+				42832CA42FA489D8000D5982 /* FlutterWatch Watch App */,
+				42832CF82FA4E924000D5982 /* FetalMovementWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		42832C8C2FA4887A000D5982 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42832CA32FA489D8000D5982 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42832CF72FA4E924000D5982 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -132,10 +320,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42832D1F2FA5A84C000D5982 /* DataModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42832CA12FA489D8000D5982 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42832D202FA5A84C000D5982 /* DataModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42832CF52FA4E924000D5982 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42832D1E2FA5A84C000D5982 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42832CAE2FA489D9000D5982 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42832CA42FA489D8000D5982 /* FlutterWatch Watch App */;
+			targetProxy = 42832CAD2FA489D9000D5982 /* PBXContainerItemProxy */;
+		};
+		42832D0A2FA4E926000D5982 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42832CF82FA4E924000D5982 /* FetalMovementWidgetExtension */;
+			targetProxy = 42832D092FA4E926000D5982 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		42832C9D2FA4887B000D5982 /* Debug */ = {
@@ -144,8 +362,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Flutter/Flutter.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQ6598YPAZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Flutter/Info.plist;
@@ -154,13 +374,15 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cn.verdvana.Flutter;
+				PRODUCT_BUNDLE_IDENTIFIER = app.verdvana.Flutter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -177,8 +399,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Flutter/Flutter.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQ6598YPAZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Flutter/Info.plist;
@@ -187,13 +411,15 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cn.verdvana.Flutter;
+				PRODUCT_BUNDLE_IDENTIFIER = app.verdvana.Flutter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -323,6 +549,138 @@
 			};
 			name = Release;
 		};
+		42832CB12FA489D9000D5982 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQ6598YPAZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FlutterWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = app.verdvana.Flutter;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.verdvana.Flutter.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		42832CB22FA489D9000D5982 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQ6598YPAZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FlutterWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = app.verdvana.Flutter;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.verdvana.Flutter.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+		42832D0D2FA4E926000D5982 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQ6598YPAZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FetalMovementWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FetalMovementWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.verdvana.Flutter.watchkitapp.FetalMovementWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		42832D0E2FA4E926000D5982 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQ6598YPAZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FetalMovementWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FetalMovementWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.verdvana.Flutter.watchkitapp.FetalMovementWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -340,6 +698,24 @@
 			buildConfigurations = (
 				42832C9D2FA4887B000D5982 /* Debug */,
 				42832C9E2FA4887B000D5982 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42832CB02FA489D9000D5982 /* Build configuration list for PBXNativeTarget "FlutterWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42832CB12FA489D9000D5982 /* Debug */,
+				42832CB22FA489D9000D5982 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42832D0C2FA4E926000D5982 /* Build configuration list for PBXNativeTarget "FetalMovementWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42832D0D2FA4E926000D5982 /* Debug */,
+				42832D0E2FA4E926000D5982 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

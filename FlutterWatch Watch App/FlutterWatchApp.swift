@@ -1,11 +1,5 @@
-//
-//  FlutterWatchApp.swift
-//  FlutterWatch Watch App
-//
-//  Created by VERDVANA on 2026/5/1.
-//
-
 import SwiftUI
+import SwiftData
 
 @main
 struct FlutterWatch_Watch_AppApp: App {
@@ -13,5 +7,7 @@ struct FlutterWatch_Watch_AppApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [FetalMovementSession.self, FetalMovementRecord.self, AppSettings.self])
     }
 }
+

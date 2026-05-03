@@ -1,0 +1,48 @@
+{
+  "source": "/Users/verdvana/Project/iOS_App/Flutter/FlutterWatch Watch App/Complication.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 75
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld 次",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 86
+        }
+      },
+      {
+        "comment": "",
+        "key": "今日胎动",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 83
+        }
+      },
+      {
+        "comment": "",
+        "key": "胎动统计",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 104
+        }
+      },
+      {
+        "comment": "",
+        "key": "在表盘显示今日胎动总数。",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 105
+        }
+      }
+    ]
+  },
+  "version": 1
+}

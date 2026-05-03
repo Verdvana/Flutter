@@ -1,0 +1,5 @@
+---
+triple:          'arm64_32-apple-darwin'
+binary-path:     '/Users/verdvana/Project/iOS_App/Flutter/build/Release-watchos/FetalMovementWidgetExtension.appex/FetalMovementWidgetExtension'
+relocations:     []
+...

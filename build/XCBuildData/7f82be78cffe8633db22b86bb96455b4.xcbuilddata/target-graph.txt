@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+Target 'Flutter' in project 'Flutter'
+➜ Explicit dependency on target 'FlutterWatch Watch App' in project 'Flutter'
+Target 'FlutterWatch Watch App' in project 'Flutter'
+➜ Explicit dependency on target 'FetalMovementWidgetExtension' in project 'Flutter'
+Target 'FetalMovementWidgetExtension' in project 'Flutter' (no dependencies)

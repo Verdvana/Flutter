@@ -1,0 +1,48 @@
+{
+  "source": "/Users/verdvana/Project/iOS_App/Flutter/FetalMovementWidget/FetalMovementWidget.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Emoji:",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 56
+        }
+      },
+      {
+        "comment": "",
+        "key": "Time:",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 52
+        }
+      },
+      {
+        "comment": "",
+        "key": "My Widget",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 76
+        }
+      },
+      {
+        "comment": "",
+        "key": "This is an example widget.",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 77
+        }
+      },
+      {
+        "comment": "",
+        "key": "Timer is running",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 87
+        }
+      }
+    ]
+  },
+  "version": 1
+}
