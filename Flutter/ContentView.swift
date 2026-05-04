@@ -473,7 +473,7 @@ final class FetalMovementManager {
     func tryEndSession() { if let session = activeSession { if !session.isDurationValid { showValidityAlert = true } else { finalizeSession(discard: false) } } }
     func finalizeSession(discard: Bool) {
         guard let session = activeSession else { return }
-        if !discard { session.endDate = Date() }
+        if discard { session.isDiscarded = true } else { session.endDate = Date() }
         activeSession = nil; showValidityAlert = false
         saveContext()
         endLiveActivity(for: session, discard: discard)
