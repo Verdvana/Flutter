@@ -12,6 +12,8 @@ struct ContentView: View {
     private var allSessions: [FetalMovementSession]
     
     @State private var manager: FetalMovementManager?
+    @State private var showingShareSheet = false
+    @State private var csvFileURL: URL?
 
     var body: some View {
         NavigationStack {
@@ -49,6 +51,25 @@ struct ContentView: View {
                 Button("继续", role: .cancel) { manager?.showValidityAlert = false }
             } message: {
                 Text("本次监测不足 20 分钟，建议继续记录。")
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        if let url = generateCSV(from: allSessions) {
+                            csvFileURL = url
+                            showingShareSheet = true
+                        }
+                    } label: {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                    .disabled(allSessions.filter({ !$0.isDiscarded && $0.endDate != nil }).isEmpty)
+                }
+            }
+            .sheet(isPresented: $showingShareSheet) {
+                if let url = csvFileURL {
+                    ShareSheet(activityItems: [url])
+                        .presentationDetents([.medium, .large])
+                }
             }
         }
         .preferredColorScheme(.dark)
@@ -147,6 +168,61 @@ struct ContentView: View {
         let mins = Int(max(0, duration)) / 60; let secs = Int(max(0, duration)) % 60
         return String(format: "%02d:%02d", mins, secs)
     }
+    
+    private func generateCSV(from sessions: [FetalMovementSession]) -> URL? {
+        let history = sessions
+            .filter { !$0.isDiscarded && $0.endDate != nil }
+            .sorted { $0.startDate < $1.startDate }
+        guard !history.isEmpty else { return nil }
+        
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        df.locale = Locale(identifier: "zh_CN")
+        
+        var csv = "序号,开始时间,结束时间,时长(分钟),有效胎动(次),累计点击(次)\n"
+        for (i, session) in history.enumerated() {
+            let start = df.string(from: session.startDate)
+            let end = df.string(from: session.endDate ?? session.startDate)
+            let duration = Int(session.duration / 60)
+            let count = session.count
+            let rawCount = session.rawCount
+            csv += "\(i + 1),\(start),\(end),\(duration),\(count),\(rawCount)\n"
+        }
+        
+        csv += "\n详细记录\n"
+        csv += "会话序号,会话开始时间,记录时间,是否有效\n"
+        for (i, session) in history.enumerated() {
+            let sessionStart = df.string(from: session.startDate)
+            for record in session.records.sorted(by: { $0.timestamp < $1.timestamp }) {
+                let timestamp = df.string(from: record.timestamp)
+                let valid = record.isValidated ? "有效" : "无效(间隔不足)"
+                csv += "\(i + 1),\(sessionStart),\(timestamp),\(valid)\n"
+            }
+        }
+        
+        let fileDateFmt = DateFormatter()
+        fileDateFmt.dateFormat = "yyyyMMdd_HHmmss"
+        let fileName = "胎动记录_\(fileDateFmt.string(from: Date())).csv"
+        let fileURL = FileManager.default.temporaryDirectory.appendingPathComponent(fileName)
+        
+        do {
+            let bom = "\u{FEFF}"
+            try (bom + csv).write(to: fileURL, atomically: true, encoding: .utf8)
+            return fileURL
+        } catch {
+            return nil
+        }
+    }
+}
+
+struct ShareSheet: UIViewControllerRepresentable {
+    let activityItems: [Any]
+    
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+    }
+    
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }
 
 struct HistorySectionView: View {
