@@ -7,6 +7,7 @@ import WidgetKit
 // MARK: - 主视图 (iOS)
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
+    @Environment(\.scenePhase) private var scenePhase
     @Query(sort: \FetalMovementSession.startDate, order: .reverse) 
     private var allSessions: [FetalMovementSession]
     
@@ -53,6 +54,12 @@ struct ContentView: View {
         .preferredColorScheme(.dark)
         .onAppear {
             if manager == nil { manager = FetalMovementManager(modelContext: modelContext) }
+        }
+        .onChange(of: scenePhase) { _, newPhase in
+            guard let manager else { return }
+            if newPhase == .background {
+                manager.activateLiveActivityIfNeeded()
+            }
         }
     }
     
@@ -161,6 +168,9 @@ struct HistorySectionView: View {
                     .listRowBackground(Color.fitnessDarkGray)
                     .swipeActions(edge: .trailing) {
                         Button(role: .destructive) {
+                            #if canImport(ActivityKit)
+                            FetalMovementLiveActivityManager.shared.endIfActive(for: session, discard: false)
+                            #endif
                             WatchConnectivitySyncCoordinator.shared.sendSessionDeleted(session)
                             modelContext.delete(session)
                         } label: {
@@ -444,6 +454,7 @@ final class FetalMovementManager {
         activeSession = session
         rawClickCount = 0
         saveContext()
+        activateLiveActivityIfNeeded()
         WatchConnectivitySyncCoordinator.shared.sendSessionStarted(session)
     }
     func logMovement() {
@@ -455,6 +466,7 @@ final class FetalMovementManager {
         let record = FetalMovementRecord(timestamp: now, isValidated: isValid); session.records.append(record)
         if isValid { triggerHapticFeedback(.success) } else { rawClickCount += 1; triggerHapticFeedback(.directionDown) }
         saveContext()
+        activateLiveActivityIfNeeded()
         WatchConnectivitySyncCoordinator.shared.sendMovementLogged(session: session, record: record)
         WidgetCenter.shared.reloadAllTimelines()
     }
@@ -464,6 +476,7 @@ final class FetalMovementManager {
         if !discard { session.endDate = Date() }
         activeSession = nil; showValidityAlert = false
         saveContext()
+        endLiveActivity(for: session, discard: discard)
         WatchConnectivitySyncCoordinator.shared.sendSessionFinalized(session, discard: discard)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { self.rawClickCount = 0; self.refreshID = UUID() }
     }
@@ -482,6 +495,7 @@ final class FetalMovementManager {
         }
     }
     private func reloadFromStore() {
+        let previousSessionID = activeSession?.sessionID
         let descriptor = FetchDescriptor<FetalMovementSession>(
             predicate: #Predicate<FetalMovementSession> { session in
                 session.endDate == nil && !session.isDiscarded
@@ -493,6 +507,7 @@ final class FetalMovementManager {
         rawClickCount = max(0, (activeSession?.rawCount ?? 0) - (activeSession?.count ?? 0))
         refreshID = UUID()
         WidgetCenter.shared.reloadAllTimelines()
+        syncLiveActivityState(previousSessionID: previousSessionID)
     }
     private func normalizeOpenSessions(_ openSessions: [FetalMovementSession]) -> FetalMovementSession? {
         guard !openSessions.isEmpty else { return nil }
@@ -516,6 +531,30 @@ final class FetalMovementManager {
         }
 
         return newestSession.isDiscarded ? nil : newestSession
+    }
+    func activateLiveActivityIfNeeded() {
+        guard let activeSession else { return }
+        #if canImport(ActivityKit)
+        FetalMovementLiveActivityManager.shared.activateIfNeeded(for: activeSession)
+        #endif
+    }
+    private func syncLiveActivityState(previousSessionID: String?) {
+        #if canImport(ActivityKit)
+        let currentSessionID = activeSession?.sessionID
+
+        if let activeSession {
+            FetalMovementLiveActivityManager.shared.activateIfNeeded(for: activeSession)
+        }
+
+        if previousSessionID != currentSessionID || currentSessionID == nil {
+            FetalMovementLiveActivityManager.shared.endAllExcept(sessionID: currentSessionID)
+        }
+        #endif
+    }
+    private func endLiveActivity(for session: FetalMovementSession, discard: Bool) {
+        #if canImport(ActivityKit)
+        FetalMovementLiveActivityManager.shared.endIfActive(for: session, discard: discard)
+        #endif
     }
     private func triggerHapticFeedback(_ type: HapticType = .success) {
         #if os(watchOS)

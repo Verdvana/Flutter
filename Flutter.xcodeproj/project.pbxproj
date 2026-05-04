@@ -14,6 +14,10 @@
 		42832D1E2FA5A84C000D5982 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42832D1D2FA5A84C000D5982 /* DataModel.swift */; };
 		42832D1F2FA5A84C000D5982 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42832D1D2FA5A84C000D5982 /* DataModel.swift */; };
 		42832D202FA5A84C000D5982 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42832D1D2FA5A84C000D5982 /* DataModel.swift */; };
+		42BB10012FB1000000D5982 /* FetalMovementLiveActivityExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 42BB10002FB1000000D5982 /* FetalMovementLiveActivityExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		42BB10032FB1000000D5982 /* ActivityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BB10022FB1000000D5982 /* ActivityKit.framework */; };
+		42BB10042FB1000000D5982 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42832CFB2FA4E924000D5982 /* WidgetKit.framework */; };
+		42BB10052FB1000000D5982 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42832CFD2FA4E925000D5982 /* SwiftUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +35,13 @@
 			remoteGlobalIDString = 42832CF82FA4E924000D5982;
 			remoteInfo = FetalMovementWidgetExtension;
 		};
+		42BB10072FB1000000D5982 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42832C862FA4887A000D5982 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42BB10102FB1000000D5982;
+			remoteInfo = FetalMovementLiveActivityExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +54,17 @@
 				42832CAF2FA489D9000D5982 /* FlutterWatch Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42BB100A2FB1000000D5982 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				42BB10012FB1000000D5982 /* FetalMovementLiveActivityExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		42832D102FA4E926000D5982 /* Embed Foundation Extensions */ = {
@@ -65,6 +87,8 @@
 		42832CFB2FA4E924000D5982 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		42832CFD2FA4E925000D5982 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		42832D1D2FA5A84C000D5982 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		42BB10002FB1000000D5982 /* FetalMovementLiveActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FetalMovementLiveActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		42BB10022FB1000000D5982 /* ActivityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActivityKit.framework; path = System/Library/Frameworks/ActivityKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -88,6 +112,13 @@
 				ContentView.swift,
 			);
 			target = 42832CF82FA4E924000D5982 /* FetalMovementWidgetExtension */;
+		};
+		42BB10092FB1000000D5982 /* Exceptions for "FetalMovementLiveActivity" folder in "FetalMovementLiveActivityExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 42BB10102FB1000000D5982 /* FetalMovementLiveActivityExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -116,6 +147,14 @@
 			path = FetalMovementWidget;
 			sourceTree = "<group>";
 		};
+		42BB10082FB1000000D5982 /* FetalMovementLiveActivity */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				42BB10092FB1000000D5982 /* Exceptions for "FetalMovementLiveActivity" folder in "FetalMovementLiveActivityExtension" target */,
+			);
+			path = FetalMovementLiveActivity;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +181,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		42BB10132FB1000000D5982 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42BB10032FB1000000D5982 /* ActivityKit.framework in Frameworks */,
+				42BB10052FB1000000D5982 /* SwiftUI.framework in Frameworks */,
+				42BB10042FB1000000D5982 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -152,6 +201,7 @@
 				42832C902FA4887A000D5982 /* Flutter */,
 				42832CA62FA489D8000D5982 /* FlutterWatch Watch App */,
 				42832CFF2FA4E925000D5982 /* FetalMovementWidget */,
+				42BB10082FB1000000D5982 /* FetalMovementLiveActivity */,
 				42832CFA2FA4E924000D5982 /* Frameworks */,
 				42832C8F2FA4887A000D5982 /* Products */,
 			);
@@ -163,6 +213,7 @@
 				42832C8E2FA4887A000D5982 /* Flutter.app */,
 				42832CA52FA489D8000D5982 /* FlutterWatch Watch App.app */,
 				42832CF92FA4E924000D5982 /* FetalMovementWidgetExtension.appex */,
+				42BB10002FB1000000D5982 /* FetalMovementLiveActivityExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,6 +221,7 @@
 		42832CFA2FA4E924000D5982 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42BB10022FB1000000D5982 /* ActivityKit.framework */,
 				42832CFB2FA4E924000D5982 /* WidgetKit.framework */,
 				42832CFD2FA4E925000D5982 /* SwiftUI.framework */,
 			);
@@ -187,11 +239,13 @@
 				42832C8B2FA4887A000D5982 /* Frameworks */,
 				42832C8C2FA4887A000D5982 /* Resources */,
 				42832CB32FA489D9000D5982 /* Embed Watch Content */,
+				42BB100A2FB1000000D5982 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				42832CAE2FA489D9000D5982 /* PBXTargetDependency */,
+				42BB10062FB1000000D5982 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				42832C902FA4887A000D5982 /* Flutter */,
@@ -249,6 +303,28 @@
 			productReference = 42832CF92FA4E924000D5982 /* FetalMovementWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		42BB10102FB1000000D5982 /* FetalMovementLiveActivityExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42BB10182FB1000000D5982 /* Build configuration list for PBXNativeTarget "FetalMovementLiveActivityExtension" */;
+			buildPhases = (
+				42BB10122FB1000000D5982 /* Sources */,
+				42BB10132FB1000000D5982 /* Frameworks */,
+				42BB10142FB1000000D5982 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				42BB10082FB1000000D5982 /* FetalMovementLiveActivity */,
+			);
+			name = FetalMovementLiveActivityExtension;
+			packageProductDependencies = (
+			);
+			productName = FetalMovementLiveActivityExtension;
+			productReference = 42BB10002FB1000000D5982 /* FetalMovementLiveActivityExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -266,6 +342,9 @@
 						CreatedOnToolsVersion = 26.4.1;
 					};
 					42832CF82FA4E924000D5982 = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+					42BB10102FB1000000D5982 = {
 						CreatedOnToolsVersion = 26.4.1;
 					};
 				};
@@ -287,6 +366,7 @@
 				42832C8D2FA4887A000D5982 /* Flutter */,
 				42832CA42FA489D8000D5982 /* FlutterWatch Watch App */,
 				42832CF82FA4E924000D5982 /* FetalMovementWidgetExtension */,
+				42BB10102FB1000000D5982 /* FetalMovementLiveActivityExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -307,6 +387,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		42832CF72FA4E924000D5982 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42BB10142FB1000000D5982 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -340,6 +427,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		42BB10122FB1000000D5982 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -352,6 +446,11 @@
 			isa = PBXTargetDependency;
 			target = 42832CF82FA4E924000D5982 /* FetalMovementWidgetExtension */;
 			targetProxy = 42832D092FA4E926000D5982 /* PBXContainerItemProxy */;
+		};
+		42BB10062FB1000000D5982 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42BB10102FB1000000D5982 /* FetalMovementLiveActivityExtension */;
+			targetProxy = 42BB10072FB1000000D5982 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -681,6 +780,68 @@
 			};
 			name = Release;
 		};
+		42BB10162FB1000000D5982 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQ6598YPAZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FetalMovementLiveActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FetalMovementLiveActivity;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.verdvana.Flutter.FetalMovementLiveActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		42BB10172FB1000000D5982 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CQ6598YPAZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FetalMovementLiveActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FetalMovementLiveActivity;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.verdvana.Flutter.FetalMovementLiveActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -716,6 +877,15 @@
 			buildConfigurations = (
 				42832D0D2FA4E926000D5982 /* Debug */,
 				42832D0E2FA4E926000D5982 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42BB10182FB1000000D5982 /* Build configuration list for PBXNativeTarget "FetalMovementLiveActivityExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42BB10162FB1000000D5982 /* Debug */,
+				42BB10172FB1000000D5982 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
