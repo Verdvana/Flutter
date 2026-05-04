@@ -74,6 +74,7 @@ struct HomeListView: View {
                         HistoryRowView(session: session)
                             .swipeActions(edge: .trailing) {
                                 Button(role: .destructive) {
+                                    WatchAppSyncCoordinator.shared.sendSessionDeleted(session)
                                     modelContext.delete(session)
                                 } label: {
                                     Label("删除", systemImage: "trash")
@@ -219,6 +220,7 @@ struct MainRecordingView: View {
 @Observable
 final class FetalMovementManager {
     private var modelContext: ModelContext
+    private let movementSeparationInterval: TimeInterval = 3 * 60
     private let staleSessionThreshold: TimeInterval = 12 * 60 * 60
     var activeSession: FetalMovementSession?; var showValidityAlert: Bool = false; var clickTrigger: Bool = false; var rawClickCount: Int = 0; var refreshID: UUID = UUID()
     init(modelContext: ModelContext) {
@@ -246,7 +248,7 @@ final class FetalMovementManager {
         let now = Date(); clickTrigger.toggle(); if activeSession == nil { startNewSession(at: now) }
         guard let session = activeSession else { return }
         let validatedRecords = session.records.filter { $0.isValidated }.sorted(by: { $0.timestamp < $1.timestamp })
-        var isValid = true; if let lastValidRecord = validatedRecords.last { if now.timeIntervalSince(lastValidRecord.timestamp) < 5 * 60 { isValid = false } }
+        var isValid = true; if let lastValidRecord = validatedRecords.last { if now.timeIntervalSince(lastValidRecord.timestamp) < movementSeparationInterval { isValid = false } }
         let record = FetalMovementRecord(timestamp: now, isValidated: isValid); session.records.append(record)
         if isValid { triggerHapticFeedback(.success) } else { rawClickCount += 1; triggerHapticFeedback(.directionDown) }
         saveContext()
@@ -341,6 +343,7 @@ enum WatchAppSyncEventType: String {
     case sessionStarted
     case movementLogged
     case sessionFinalized
+    case sessionDeleted
 }
 
 enum WatchAppSyncPayloadKey {
@@ -429,6 +432,14 @@ final class WatchAppSyncCoordinator: NSObject, WCSessionDelegate {
         } else {
             updateApplicationContext(for: session)
         }
+    }
+
+    func sendSessionDeleted(_ session: FetalMovementSession) {
+        sendGuaranteedUserInfo([
+            WatchAppSyncPayloadKey.eventType: WatchAppSyncEventType.sessionDeleted.rawValue,
+            WatchAppSyncPayloadKey.sessionID: session.resolvedSessionID,
+            WatchAppSyncPayloadKey.startDate: session.startDate.timeIntervalSince1970,
+        ])
     }
 
     private func sendGuaranteedUserInfo(_ payload: [String: Any]) {
@@ -546,6 +557,8 @@ final class WatchAppSyncCoordinator: NSObject, WCSessionDelegate {
             applyMovementLogged(userInfo, modelContext: modelContext)
         case .sessionFinalized:
             applySessionFinalized(userInfo, modelContext: modelContext)
+        case .sessionDeleted:
+            applySessionDeleted(userInfo, modelContext: modelContext)
         }
     }
 
@@ -615,6 +628,16 @@ final class WatchAppSyncCoordinator: NSObject, WCSessionDelegate {
             session.endDate = Date(timeIntervalSince1970: endTimestamp)
         }
 
+        saveAndNotify(modelContext)
+    }
+
+    private func applySessionDeleted(_ payload: [String: Any], modelContext: ModelContext) {
+        guard let sessionID = payload[WatchAppSyncPayloadKey.sessionID] as? String,
+              let session = findSession(withID: sessionID, modelContext: modelContext) else {
+            return
+        }
+
+        modelContext.delete(session)
         saveAndNotify(modelContext)
     }
 

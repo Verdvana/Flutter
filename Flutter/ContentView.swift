@@ -161,6 +161,7 @@ struct HistorySectionView: View {
                     .listRowBackground(Color.fitnessDarkGray)
                     .swipeActions(edge: .trailing) {
                         Button(role: .destructive) {
+                            WatchConnectivitySyncCoordinator.shared.sendSessionDeleted(session)
                             modelContext.delete(session)
                         } label: {
                             Label("删除", systemImage: "trash")
@@ -257,8 +258,8 @@ struct SessionDetailView: View {
                                 if record.isValidated {
                                     BarMark(
                                         x: .value("时间", record.timestamp),
-                                        yStart: .value("状态", 0),
-                                        yEnd: .value("状态", 1),
+                                        yStart: .value("状态", 0.25),
+                                        yEnd: .value("状态", 0.75),
                                         width: .fixed(8)
                                     )
                                     .foregroundStyle(Color.fitnessGreen.gradient)
@@ -421,6 +422,7 @@ struct StartRecordButton: View {
 @Observable
 final class FetalMovementManager {
     private var modelContext: ModelContext
+    private let movementSeparationInterval: TimeInterval = 3 * 60
     private let staleSessionThreshold: TimeInterval = 12 * 60 * 60
     var activeSession: FetalMovementSession?; var showValidityAlert: Bool = false; var clickTrigger: Bool = false; var rawClickCount: Int = 0; var refreshID: UUID = UUID()
     init(modelContext: ModelContext) {
@@ -449,7 +451,7 @@ final class FetalMovementManager {
         if activeSession == nil { startNewSession(at: now) }
         guard let session = activeSession else { return }
         let validatedRecords = session.records.filter { $0.isValidated }.sorted(by: { $0.timestamp < $1.timestamp })
-        var isValid = true; if let lastValidRecord = validatedRecords.last { if now.timeIntervalSince(lastValidRecord.timestamp) < 5 * 60 { isValid = false } }
+        var isValid = true; if let lastValidRecord = validatedRecords.last { if now.timeIntervalSince(lastValidRecord.timestamp) < movementSeparationInterval { isValid = false } }
         let record = FetalMovementRecord(timestamp: now, isValidated: isValid); session.records.append(record)
         if isValid { triggerHapticFeedback(.success) } else { rawClickCount += 1; triggerHapticFeedback(.directionDown) }
         saveContext()

@@ -6,6 +6,7 @@ enum SyncEventType: String {
     case sessionStarted
     case movementLogged
     case sessionFinalized
+    case sessionDeleted
 }
 
 enum SyncPayloadKey {
@@ -98,6 +99,14 @@ final class WatchConnectivitySyncCoordinator: NSObject, WCSessionDelegate {
         } else {
             updateApplicationContext(for: session)
         }
+    }
+
+    func sendSessionDeleted(_ session: FetalMovementSession) {
+        sendGuaranteedUserInfo([
+            SyncPayloadKey.eventType: SyncEventType.sessionDeleted.rawValue,
+            SyncPayloadKey.sessionID: session.resolvedSessionID,
+            SyncPayloadKey.startDate: session.startDate.timeIntervalSince1970,
+        ])
     }
 
     private func sendGuaranteedUserInfo(_ payload: [String: Any]) {
@@ -219,6 +228,8 @@ final class WatchConnectivitySyncCoordinator: NSObject, WCSessionDelegate {
             applyMovementLogged(userInfo, modelContext: modelContext)
         case .sessionFinalized:
             applySessionFinalized(userInfo, modelContext: modelContext)
+        case .sessionDeleted:
+            applySessionDeleted(userInfo, modelContext: modelContext)
         }
     }
 
@@ -288,6 +299,16 @@ final class WatchConnectivitySyncCoordinator: NSObject, WCSessionDelegate {
             session.endDate = Date(timeIntervalSince1970: endTimestamp)
         }
 
+        saveAndNotify(modelContext)
+    }
+
+    private func applySessionDeleted(_ payload: [String: Any], modelContext: ModelContext) {
+        guard let sessionID = payload[SyncPayloadKey.sessionID] as? String,
+              let session = findSession(withID: sessionID, modelContext: modelContext) else {
+            return
+        }
+
+        modelContext.delete(session)
         saveAndNotify(modelContext)
     }
 

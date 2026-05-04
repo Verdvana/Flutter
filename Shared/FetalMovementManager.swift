@@ -17,6 +17,7 @@ enum ClickStatus {
 @Observable
 final class FetalMovementManager {
     private var modelContext: ModelContext
+    private let movementSeparationInterval: TimeInterval = 3 * 60
     
     var activeSession: FetalMovementSession?
     var showValidityAlert: Bool = false
@@ -54,7 +55,7 @@ final class FetalMovementManager {
         var isValid = true
         if let lastValidRecord = validatedRecords.last {
             let timeSinceLast = now.timeIntervalSince(lastValidRecord.timestamp)
-            if timeSinceLast < 5 * 60 {
+            if timeSinceLast < movementSeparationInterval {
                 isValid = false
             }
         }
